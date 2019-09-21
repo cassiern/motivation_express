@@ -11,12 +11,15 @@ const homeController = require('./controllers/home');
 
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(methodOverride('_method'))
-app.use('/home', homeController)
 
 
 
-
+//eventually hooking this up to React Native
 
 app.get('/', (req, res) =>{
-	res.render('index.js');
+	res.render('index.ejs');
+})
+
+app.listen(3000, () => {
+	console.log('your server is running...better go catch it')
 })
