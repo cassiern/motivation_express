@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const connectionString = 'mongodb://localhost/motivation';
 mongoose.connect(connectionString,
 	{useNewUrlParser: true,
-		userCreateIndex: true});
+		useUnifiedTopology: true});
 mongoose.connection.on('connect', ()=> {
 	console.log(`mongoose connected to ${connectionString}`)
 })
