@@ -1,6 +1,43 @@
 <!DOCTYPE html>
 <html>
 	<body>
-		<h1>Welcome</h1>
+
+
+<!-- action form -->
+		<form action="/actions" method="POST">
+			<input type="text" name="action" placeholder="action">
+					
+		<select>
+			<option value="1" name="category">1(AofK)</option>
+			<option value="2" name="category">2(adventure)</option>
+			<option value="3" name="category">3(business)</option>
+			<option value="4" name="category">4(fitness)</option>
+			<option value="5" name="category">5(funny)</option>
+			<option value="6" name="category">6(health)</option>
+		</select>
+		<select>
+			<option value="morning" name="timeOfDay">Morning</option>
+			<option value="afternoon" name="timeOfDay">Noon</option>
+			<option value="evening" name="timeOfDay">Evening</option>
+		</select>
+		<input type="submit">
+		</form>
+
+<!-- quotes form -->
+		<form action="/home" method="POST">
+			<input type="text" name="quote" placeholder="quote">
+			<input type="text" name="author" placeholder="author">
+		
+		<select>
+			<option value="1" name="category">1(AofK)</option>
+			<option value="2" name="category">2(adventure)</option>
+			<option value="3" name="category">3(business)</option>
+			<option value="4" name="category">4(fitness)</option>
+			<option value="5" name="category">5(funny)</option>
+			<option value="6" name="category">6(health)</option>
+		</select>
+		<input type="submit">
+		</form>
+</body>		
 	</body>
 </html>

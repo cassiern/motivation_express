@@ -16,8 +16,15 @@ app.use(methodOverride('_method'))
 
 //eventually hooking this up to React Native
 
+
+app.use('/home', homeController);
+app.use('/actions', actionsController);
+app.use('/quotes', quotesController)
+
+
+
 app.get('/', (req, res) =>{
-	res.render('index.ejs');
+	res.redirect('/home');
 })
 
 app.listen(3000, () => {
