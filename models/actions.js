@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const actionSchema = new Schema({
 	action: String,
-	category: Number,
+	category: String,
 	timeOfDay: String
 });
 
