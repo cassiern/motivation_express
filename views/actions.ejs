@@ -21,6 +21,20 @@
 			</span>
 		<%	}	%>
 
+		<% if (actions.length == 0) { %>
+			<span class="single-item"><i>No actions in the database</i></span>
+		<% } %>
+
 	</div>
+
+
+	<h4>Button to delete all actions:</h4>
+	<p>
+		WARNING: THIS IS A POTENTIALLY DESTRUCTIVE ACTION!<br>
+		PROCEED AT YOUR OWN RISK!<br>
+	</p>
+	<form action="/actions?_method=DELETE" method="POST">
+		<button type="submit">CLEAR ALL ACTIONS</button>
+	</form>
 </body>
 </html>
