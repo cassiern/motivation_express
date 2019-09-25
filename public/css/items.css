@@ -1,0 +1,13 @@
+.items-container
+{
+	display: flex;
+	flex-direction: column;
+}
+
+.single-item
+{
+	width: 400px;
+	padding: 10px;
+	margin: 10px;
+	background-color: lightgrey;
+}
