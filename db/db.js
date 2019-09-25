@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 
-//const connectionString = 'mongodb://localhost/motivationLegit';
 
 //const connectionString = 'mongodb://localhost/motivation';
 
