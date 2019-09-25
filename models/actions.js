@@ -2,9 +2,9 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const actionSchema = new Schema({
-	action: String,
-	category: String,
-	timeOfDay: String
+	text: {type: String, required: true, unique: true},
+	category: {type: String, required: true},
+	timeOfDay: {type: String, required: true}
 });
 
 

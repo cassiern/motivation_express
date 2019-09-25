@@ -2,7 +2,25 @@
 <html>
 <head>
 	<title></title>
+	<link rel="stylesheet" type="text/css" href="/css/items.css">
 </head>
 <body>
 
+	<h1>Quotes index</h1>
+
+	<div class="items-container">
+
+		<%	for (let i = 0 ; i < quotes.length; i++) {	%>
+			<span class="single-item">
+				<b>"<%=quotes[i].text%>"</b><br>
+				author: <%=quotes[i].author%><br>
+				category: <%=quotes[i].category%><br>
+				<form action="/quotes/<%=quotes[i]._id%>?_method=DELETE" method="POST">
+					<button type="submit">DELETE</button>
+				</form>
+			</span>
+		<%	}	%>
+
+	</div>
+</body>
 </html>
