@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const quotesSchema = new Schema({
-	text: {type: String, required: true},
+	text: {type: String, required: true, unique: false},
 	author: {type: String, required: true},
 	category: {type: String, required: true}
 })
