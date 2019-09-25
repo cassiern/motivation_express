@@ -2,8 +2,25 @@
 <html>
 <head>
 	<title></title>
+	<link rel="stylesheet" type="text/css" href="/css/items.css">
 </head>
 <body>
 
+	<h1>Actions index</h1>
+
+	<div class="items-container">
+
+		<%	for (let i = 0 ; i < actions.length; i++) {	%>
+			<span class="single-item">
+				<b>"<%=actions[i].text%>"</b><br>
+				category: <%=actions[i].category%><br>
+				timeOfDay: <%=actions[i].timeOfDay%><br>
+				<form action="/actions/<%=actions[i]._id%>?_method=DELETE" method="POST">
+					<button type="submit">DELETE</button>
+				</form>
+			</span>
+		<%	}	%>
+
+	</div>
 </body>
 </html>

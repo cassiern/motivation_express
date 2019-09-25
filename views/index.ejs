@@ -3,19 +3,26 @@
 	<body>
 
 
+		<h1>Motivation App Admin Tools</h1>
+
+		<a href="/home/actions">View all actions</a><br>
+		<a href="/home/quotes">View all quotes</a><br>
+
 <!-- action form -->
+	<h3>Add single action:</h3>
+	<br><br>
 		<form action="/actions" method="POST">
-			<input type="text" name="action" placeholder="action">
+			<input type="text" name="text" placeholder="action">
 					
-		<select>
-			<option value="1" name="category">1(AofK)</option>
-			<option value="2" name="category">2(adventure)</option>
-			<option value="3" name="category">3(business)</option>
-			<option value="4" name="category">4(fitness)</option>
-			<option value="5" name="category">5(funny)</option>
-			<option value="6" name="category">6(health)</option>
+		<select name="category">
+			<option value="actofkindness" name="category">Act Of Kindness</option>
+			<option value="adventure" name="category">Adventure</option>
+			<option value="business" name="category">Business</option>
+			<option value="fitness" name="category">Fitness</option>
+			<option value="funny" name="category">Funny</option>
+			<option value="health" name="category">Health</option>
 		</select>
-		<select>
+		<select name="timeOfDay">
 			<option value="morning" name="timeOfDay">Morning</option>
 			<option value="afternoon" name="timeOfDay">Noon</option>
 			<option value="evening" name="timeOfDay">Evening</option>
@@ -23,21 +30,76 @@
 		<input type="submit">
 		</form>
 
+	<h3>Add single quote:</h3>
+	<br><br>
 <!-- quotes form -->
-		<form action="/home" method="POST">
-			<input type="text" name="quote" placeholder="quote">
+		<form action="/quotes" method="POST">
+			<input type="text" name="text" placeholder="quote">
 			<input type="text" name="author" placeholder="author">
 		
 		<select>
-			<option value="1" name="category">1(AofK)</option>
-			<option value="2" name="category">2(adventure)</option>
-			<option value="3" name="category">3(business)</option>
-			<option value="4" name="category">4(fitness)</option>
-			<option value="5" name="category">5(funny)</option>
-			<option value="6" name="category">6(health)</option>
+			<option value="actofkindness" name="category">Act Of Kindness</option>
+			<option value="adventure" name="category">Adventure</option>
+			<option value="business" name="category">Business</option>
+			<option value="fitness" name="category">Fitness</option>
+			<option value="funny" name="category">Funny</option>
+			<option value="health" name="category">Health</option>
 		</select>
 		<input type="submit">
 		</form>
+<br><br>
+
+
+
+
+
+<h3>Add multiple actions:</h3>
+
+<p>Put your actions in the following text box, formatted as JSON, like so:</p>
+<textarea id="actions-textarea" rows="25" cols="100">
+[
+	{
+		"text": "Example action",
+		"category": "business",
+		"timeOfDay": "morning"
+	},
+	{
+		"text": "Another example action",
+		"category": "health",
+		"timeOfDay": "evening"
+	}
+]
+</textarea>
+<br>
+<button id="actions-button" onClick="handleActionsClick()">Submit Actions</button>
+
+
+
+
+<h3>Add multiple quotes:</h3>
+
+<p>Put your quotes in the following text box, formatted as JSON, like so:</p>
+<textarea id="quotes-textarea" rows="25" cols="100">
+[
+	{
+		"text": "Example quote",
+		"author": "Example Author",
+		"category": "business"
+	},
+	{
+		"text": "Another example quote",
+		"author": "Another example author",
+		"category": "health"
+	}
+]
+</textarea>
+<br>
+<button id="quotes-button" onClick="handleQuotesClick()">Submit Quotes</button>
+
+
+<script type="text/javascript" src="js/index-app.js"></script>
+
+
 </body>		
 	</body>
 </html>
