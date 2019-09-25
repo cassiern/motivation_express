@@ -68,4 +68,30 @@ router.delete('/:id', (req,res) =>
 
 
 
+
+//CLEAR for quotes:
+router.delete('/', (req, res) =>
+{
+	Quotes.remove({}, (err) =>
+	{
+		if (err)
+		{
+			console.log(err);
+			res.json(
+			{
+				success: false
+			})
+		}
+		else
+		{
+			res.json(
+			{
+				success: true
+			});
+		}
+	})
+});
+
+
+
 module.exports = router;

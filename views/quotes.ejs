@@ -21,6 +21,23 @@
 			</span>
 		<%	}	%>
 
+		<% if (quotes.length == 0) { %>
+			<span class="single-item"><i>No quotes in the database</i></span>
+		<% } %>
+
 	</div>
+
+
+
+
+	<h4>Button to delete all quotes:</h4>
+	<p>
+		WARNING: THIS IS A POTENTIALLY DESTRUCTIVE ACTION!<br>
+		PROCEED AT YOUR OWN RISK!<br>
+	</p>
+	<form action="/quotes?_method=DELETE" method="POST">
+		<button type="submit">CLEAR ALL QUOTES</button>
+	</form>
+
 </body>
 </html>
