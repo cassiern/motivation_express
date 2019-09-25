@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const connectionString = 'mongodb://localhost/motivation';
+const connectionString = 'mongodb://localhost/motivationLegit';
 
 //console.log("db.js loaded");
 
