@@ -23,7 +23,15 @@ const userSchema = new mongoose.Schema(
 	  displayname: {
 	    type: String,
 	    required: true
-	  }
+	  },
+	  timeSelected: [{
+	  	type: String,
+	  	required: true
+	  }],
+	  categoriesSelected: [{
+	  	type: String,
+	  	required: true
+	  }]
 	}
 );
 
