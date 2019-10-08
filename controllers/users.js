@@ -15,5 +15,16 @@ router.post('/', async(req, res) => {
 	}	
 });
 
+//GET for users (login route)
+router.get('/', async(req, res) => {
+	try{
+		const users = await User.find({});
+		console.log(users, '<-- users in the index route');
+
+	}catch(error){
+		res.send(error)
+	}
+})
+
 
 module.exports = router;

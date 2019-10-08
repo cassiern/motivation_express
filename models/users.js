@@ -5,12 +5,12 @@ const userSchema = new mongoose.Schema(
 	{
 	  username: {
 	    type: String,
-	    required: true,
+	    required: false,
 	    unique: true
 	  },
 	  usertype:	{
 	  	type: String,
-	  	required: true
+	  	required: false
 	  },
 	  email: {
 	    type: String,
@@ -22,7 +22,7 @@ const userSchema = new mongoose.Schema(
 	  },
 	  displayname: {
 	    type: String,
-	    required: true
+	    required: false
 	  },
 	  timeSelected: [{
 	  	type: String,
